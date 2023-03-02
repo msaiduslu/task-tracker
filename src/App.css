@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
+#root{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  margin-top: 1rem;
+ width: 100vw; 
+ 
+}
+.App{
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  background-color: #A9C9FF;
+  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+  
+
+padding: 1rem 0;
+border-radius: 10px;
+
+}
+
+.header-container{
+  text-align: center;
+}
+button{
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
   color: white;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.add-task-container{
+  width: 80%;
+}
+.add-task-container form{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  gap: 1rem;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
 }
+
+.input-container input{
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.button{
+  text-align: center;
+}
+button:hover{
+  cursor: pointer;
+} 
+
+.button button{
+
+  background-color: #00b31e;
+ 
+}
+
+.task-list-container{
+  width: 90%;
+}
+
+.task-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+margin-bottom: 0.5rem;
+
+  
+
+}
+.task-container p {
+  padding: 0.5rem 0rem;
+  width: 100%;
+  
+}
+.task-list-container p{
+  text-align: center;
+  color: rgb(7, 9, 170);
+}
+
+.task-done{
+  text-decoration: line-through;
+  border-left: 10px solid red;
+  
+
+}
+
+.task-done p{
+  color: red;
+}
+
+.icon{
+  font-size: 30px;
+  color: red;
+}
+.task-container:hover{
+cursor: pointer;
+}
+
+

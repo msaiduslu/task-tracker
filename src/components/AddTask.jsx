@@ -1,12 +1,17 @@
 import { useState } from "react";
 
-const AddTask = ({ items, setItems }) => {
+const AddTask = ({ items, setItems, setItemstoLocal }) => {
   const [task, setTask] = useState("");
   const [date, setDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setItems(...items, { task: task, date: date });
+    setItems([
+      ...items,
+      { id: items.length + 1, task: task, date: date, isComplited: false },
+    ]);
+    setTask("");
+    setDate("");
   };
   console.log(items);
   return (
@@ -17,7 +22,11 @@ const AddTask = ({ items, setItems }) => {
             <label htmlFor="">Task</label>
           </div>
           <div>
-            <input onChange={(e) => setTask(e.target.value)} type="text" />
+            <input
+              onChange={(e) => setTask(e.target.value)}
+              value={task}
+              type="text"
+            />
           </div>
           <div>
             <label htmlFor="">Day & Time</label>
@@ -26,10 +35,13 @@ const AddTask = ({ items, setItems }) => {
             <input
               onChange={(e) => setDate(e.target.value)}
               type="datetime-local"
+              value={date}
             />
           </div>
         </div>
-        <button type="submit">Save</button>
+        <div className="button">
+          <button type="submit">Save</button>
+        </div>
       </form>
     </div>
   );
