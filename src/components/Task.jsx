@@ -17,7 +17,7 @@ const Task = ({
             <p>{task}</p>
           </div>
           <div>
-            {/* <p>{`${date.split("T")[0]} , ${date.split("T")[1]} `}</p> */}
+            <p>{`${date.split("T")[0]} , ${date.split("T")[1]} `}</p>
           </div>
         </div>
         <div>
